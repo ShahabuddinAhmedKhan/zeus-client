@@ -11,6 +11,8 @@ import Loading from "../components/Loading";
 import AddEquipment from "../components/Equipment Related Page/AddEquipment";
 import Socials from "../components/Socials";
 import Private from "../components/Private";
+import AllEquipment from "../components/Equipment Related Page/AllEquipment";
+import Details from "../components/Equipment Related Page/Details";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +35,15 @@ const router = createBrowserRouter([
                 path: "addEquipment",
                 element: <Private><AddEquipment></AddEquipment></Private>
             },
+            {
+                path: "allEquipment",
+                element: <AllEquipment></AllEquipment>,
+                loader: () => fetch("http://localhost:5031/equipments")
+            },
+            {
+                path: "details/:id",
+                element: <Details></Details>
+            }
 
         ]
     },
