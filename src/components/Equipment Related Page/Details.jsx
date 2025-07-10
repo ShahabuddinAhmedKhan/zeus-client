@@ -11,14 +11,14 @@ const Details = () => {
 
 
     return (
-        <div className='my-10 max-w-3xl lg:max-w-7xl mx-auto'>
-            <div className="card justify-start lg:card-side bg-base-100 shadow-sm  gap-12">
-                <figure className=''>
-                    <img className='w-2xl rounded-2xl'
+        <div className='my-10 md:max-w-3xl lg:max-w-7xl max-w-xs  mx-auto'>
+            <div className="card justify-start lg:card-side bg-base-100 shadow-sm  gap-12 ">
+                <figure className='lg:w-500 '>
+                    <img className='w-full lg:h-150  rounded-2xl object-cover'
                         src={image}
                         alt="Album" />
                 </figure>
-                <div className=" space-y-3">
+                <div className=" space-y-3 w-full">
                     <Zoom><h2 className="card-title text-3xl">{name}</h2></Zoom>
                     <Fade>
                         <p><span className='font-bold'>Description:</span> {description}</p>

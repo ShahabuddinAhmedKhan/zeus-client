@@ -13,6 +13,7 @@ import Socials from "../components/Socials";
 import Private from "../components/Private";
 import AllEquipment from "../components/Equipment Related Page/AllEquipment";
 import Details from "../components/Equipment Related Page/Details";
+import Products from "../components/Products";
 
 const router = createBrowserRouter([
     {
@@ -21,8 +22,18 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Banner></Banner>
+                element: <>
+                    <Banner></Banner>
+                    <Products></Products>
+                </>,
+                loader: () => {
+                    const forProducts = fetch("http://localhost:5031/sixProducts");
+
+                    return forProducts
+                }
             },
+
+
             {
                 path: "login",
                 element: <Login></Login>
@@ -43,7 +54,7 @@ const router = createBrowserRouter([
             {
                 path: "details/:id",
                 element: <Private><Details></Details></Private>,
-                loader: ({params}) => fetch(`http://localhost:5031/equipments/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5031/equipments/${params.id}`)
             }
 
         ]
@@ -57,7 +68,7 @@ const router = createBrowserRouter([
         element: <Socials></Socials>
     },
 
-    
+
 
 
 ]);

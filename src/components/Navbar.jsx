@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import logo from "../assets/logo.png"
 import { Link } from 'react-router';
-import Banner from './Banner';
 import { AuthContext } from './AuthProvider';
 import Swal from 'sweetalert2';
 const Navbar = () => {
