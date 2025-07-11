@@ -74,9 +74,9 @@ const SignUp = () => {
         <div>
             <div className='flex flex-col'>
                 <div className="hero bg-base-200 ">
-                    <div className="hero-content flex-col w-3/6">
+                    <div className="hero-content flex-col md:w-3/6">
                         <div className="text-center lg:text-left">
-                            <h1 className="text-5xl font-bold mb-10">Few Steps Away From <span className='text-[#571414]'>Zeusing</span></h1>
+                            <h1 className="text-3xl md:text-5xl font-bold mb-10">Few Steps Away From <span className='text-[#571414]'>Zeusing</span></h1>
 
                         </div>
                         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
