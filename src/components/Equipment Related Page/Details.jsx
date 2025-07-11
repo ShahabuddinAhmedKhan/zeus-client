@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router';
 
 const Details = () => {
     const loaderEquipmentData = useLoaderData()
-    console.log(loaderEquipmentData);
+    // console.log(loaderEquipmentData);
     const { image, category, customization, delivery, description, name, price, rating, stock } = loaderEquipmentData
 
 

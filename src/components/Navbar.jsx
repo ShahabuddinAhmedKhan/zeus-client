@@ -3,22 +3,10 @@ import logo from "../assets/logo.png"
 import { Link } from 'react-router';
 import { AuthContext } from './AuthProvider';
 import Swal from 'sweetalert2';
+import Profile from './Profile';
 const Navbar = () => {
-    const { user, signout } = useContext(AuthContext)
-    const handleSignOut = () => {
-        signout()
-            .then(() => {
-        
-                Swal.fire({
-                    title: "Successfully Logged Out!",
-                    icon: "success",
-                    draggable: true
-                });
-
-
-            })
-
-    }
+    const { user} = useContext(AuthContext)
+    
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
@@ -43,10 +31,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="navbar-end">
-                    {user ? <button onClick={() => handleSignOut()} className="btn btn-ghost">
-                        Log Out
-
-                    </button> : <Link to={"login"}>
+                    {user ? <Profile></Profile> : <Link to={"login"}>
                         <button className="btn btn-ghost">
                             Login
 

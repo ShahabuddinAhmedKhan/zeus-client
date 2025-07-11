@@ -41,7 +41,7 @@ const SignUp = () => {
                 if (result?.user) {
                     navigate("/")
 
-                    fetch("http://localhost:5031/users", {
+                    fetch("https://zeus-server.vercel.app/users", {
                         method: "POST",
                         headers: {
                             "content-type": "application/json"

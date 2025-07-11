@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router';
 
 const AllEquipment = () => {
     const loaderData = useLoaderData()
-    console.log(loaderData);
+    // console.log(loaderData);
 
     return (
         <div>

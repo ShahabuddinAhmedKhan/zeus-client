@@ -6,7 +6,7 @@ import { auth } from './firebase/firebase.init';
 
 const Login = () => {
     const location = useLocation()
-    console.log(location);
+    // console.log(location);
     const navigate = useNavigate()
 
     const { login } = useContext(AuthContext)
@@ -22,7 +22,7 @@ const Login = () => {
 
         login(email, password)
         .then((result) => {
-            console.log(result);
+            // console.log(result);
 
             location.state ? navigate(location.state)
              : navigate("/")
@@ -30,16 +30,14 @@ const Login = () => {
 
             const lastSignInTime = result?.user?.metadata?.lastSignInTime
             const body = { lastSignInTime, email }
-            fetch("http://localhost:5031/users", {
+            fetch("https://zeus-server.vercel.app/users", {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json"
                     },
                 body: JSON.stringify(body)
                 })
-                .then(res => res.json())
-                .then(data => console.log(data)
-                    )
+                
         }
 
         )
@@ -63,7 +61,7 @@ const Login = () => {
 
 
     }
-    console.log(error);
+    // console.log(error);
 
     return (
         <div>

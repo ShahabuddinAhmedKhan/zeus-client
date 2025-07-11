@@ -16,6 +16,8 @@ import Details from "../components/Equipment Related Page/Details";
 import Products from "../components/Products";
 import SportsCategory from "../components/SportsCategory";
 import MyEquipment from "../components/Equipment Related Page/MyEquipment";
+import UpdateEquipment from "../components/UpdateEquipment";
+import NonExist from "../components/NonExist";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
                     <SportsCategory></SportsCategory>
                 </>,
                 loader: async() => {
-                    const forProducts =  await fetch("http://localhost:5031/sixProducts");
+                    const forProducts =  await fetch("https://zeus-server.vercel.app/sixProducts");
                     const products = await forProducts.json()
 
                     return products
@@ -53,23 +55,27 @@ const router = createBrowserRouter([
             {
                 path: "allEquipment",
                 element: <AllEquipment></AllEquipment>,
-                loader: () => fetch("http://localhost:5031/equipments")
+                loader: () => fetch("https://zeus-server.vercel.app/equipments")
             },
             {
                 path: "details/:id",
                 element: <Private><Details></Details></Private>,
-                loader: ({ params }) => fetch(`http://localhost:5031/equipments/${params.id}`)
+                loader: ({ params }) => fetch(`https://zeus-server.vercel.app/equipments/${params.id}`)
             },
             {
                 path: `category/:name`,
                 element: <Products></Products>,
-                loader: ({params}) => fetch(`http://localhost:5031/category/${params.name}`)
+                loader: ({params}) => fetch(`https://zeus-server.vercel.app/category/${params.name}`)
             },
             {
                 path: `myEquipment/:mail`,
-                element: <MyEquipment></MyEquipment>,
-                loader: ({params}) => fetch(`http://localhost:5031/myEquipment/${params.mail}`)
+                element: <Private><MyEquipment></MyEquipment></Private>,
+                loader: ({params}) => fetch(`https://zeus-server.vercel.app/myEquipment/${params.mail}`)
             },
+            {
+                path: "updateEquipment",
+                element: <UpdateEquipment></UpdateEquipment>
+            }
 
         ]
     },
@@ -80,6 +86,10 @@ const router = createBrowserRouter([
     {
         path: "socials",
         element: <Socials></Socials>
+    },
+    {
+        path: "*",
+        element: <NonExist></NonExist>
     },
 
 

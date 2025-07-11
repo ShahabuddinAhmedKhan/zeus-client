@@ -14,7 +14,7 @@ const PersonalCard = ({ product, loadedData, setLoadedData }) => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            fetch(`http://localhost:5031/myEquipment/${id}`, {
+            fetch(`https://zeus-server.vercel.app/myEquipment/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -60,7 +60,7 @@ const PersonalCard = ({ product, loadedData, setLoadedData }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>{price}</p>
                     <div className="card-actions justify-center ">
-                        <Link to={`/update/${_id}`}>
+                        <Link state={product} to={`/updateEquipment`}>
                             <button className="btn btn-primary bg-[#c8b73a] hover:bg-[#8f9238] border-0">Update</button>
 
                         </Link>

@@ -4,8 +4,8 @@ import Card from './Card';
 
 const Products = () => {
     const loadeddata = useLoaderData()
-    
-    console.log(loadeddata);
+
+    // console.log(loadeddata);
 
     return (
         <div className='lg:max-w-7xl md:max-w-3xl max-w-xs  mx-auto'>
