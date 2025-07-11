@@ -22,7 +22,7 @@ This is a **React-based web application** designed for managing and displaying *
 - **Axios/Fetch API**: Used to make API calls to the backend for fetching, submitting, and updating data.
 - **MongoDB**: A NoSQL database used for storing user data and equipment information.
 - **CSS**: Custom CSS for styling the website, ensuring responsiveness and visually appealing layouts.
-- **State Management (Context API/Redux)**: Used to manage the global state of the application (e.g., user authentication, equipment data).
+- **State Management (Context API)**: Used to manage the global state of the application (e.g., user authentication, equipment data).
 - **dotenv**: Used for securely managing environment variables, such as database credentials and API keys.
 
 ## Setup Instructions
@@ -39,5 +39,5 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/zeus-sports-equipment.git
-   cd zeus-sports-equipment
+   git clone https://github.com/ShahabuddinAhmedKhan/zeus-client.git
+   npm i (to install all the dependencies)
