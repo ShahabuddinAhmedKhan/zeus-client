@@ -64,7 +64,7 @@ const Login = () => {
     // console.log(error);
 
     return (
-        <div className='lg:max-w-7xl md:max-w-3xl max-w-xs mx-auto'>
+        <div className='lg:max-w-7xl md:max-w-3xl  mx-auto'>
             <div className='flex flex-col'>
                 <div className="hero bg-base-200 ">
                     <div className="hero-content flex-col ">
@@ -73,7 +73,7 @@ const Login = () => {
 
                         </div>
                         <div className="card bg-base-100 md:w-full w-fit   shadow-2xl">
-                            <div className="card-body flex md:flex-row flex-col w-fit md:w-full">
+                            <div className="card-body flex md:flex-row flex-col w-90 md:w-full">
                                 <div className='flex-grow'>
                                     <form onSubmit={handleSubmit}>
                                         <fieldset className="fieldset">
