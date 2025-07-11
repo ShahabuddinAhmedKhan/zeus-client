@@ -33,7 +33,7 @@ const Navbar = () => {
                             <li><Link to={"/"}>Home</Link></li>
                             <li><Link to={"/allEquipment"}>All Sports Equipment</Link></li>
                             <li><Link to={"/addEquipment"}>Add Equipment</Link></li>
-                            <li><a>My Equipment List</a></li>
+                            <li><Link to={`/myEquipment/${user?.email}`}>My Equipment List</Link></li>
                         </ul>
                     </div>
                 </div>

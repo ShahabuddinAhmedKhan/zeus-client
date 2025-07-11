@@ -15,6 +15,7 @@ import AllEquipment from "../components/Equipment Related Page/AllEquipment";
 import Details from "../components/Equipment Related Page/Details";
 import Products from "../components/Products";
 import SportsCategory from "../components/SportsCategory";
+import MyEquipment from "../components/Equipment Related Page/MyEquipment";
 
 const router = createBrowserRouter([
     {
@@ -63,7 +64,12 @@ const router = createBrowserRouter([
                 path: `category/:name`,
                 element: <Products></Products>,
                 loader: ({params}) => fetch(`http://localhost:5031/category/${params.name}`)
-            }
+            },
+            {
+                path: `myEquipment/:mail`,
+                element: <MyEquipment></MyEquipment>,
+                loader: ({params}) => fetch(`http://localhost:5031/myEquipment/${params.mail}`)
+            },
 
         ]
     },
