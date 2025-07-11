@@ -1,6 +1,11 @@
-# Zeus Sports Equipment Website
+#Live Link
+https://zeus-73056.web.app/
 
-This is a **React-based web application** designed for managing and displaying **sports equipment**. The website allows users to view, add, and manage their sports equipment while interacting with a backend database built with **MongoDB**.
+#For browsing through the website, you need to register as some of the pages are private and requires login
+
+# Zeus Equipment Website
+
+This is a **React-based web application** designed for managing and displaying ** equipment**. The website allows users to view, add, and manage their sports equipment while interacting with a backend database built with **MongoDB**.
 
 ## Features
 
