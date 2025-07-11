@@ -1,7 +1,7 @@
-#Live Link
+# Live Link
 https://zeus-73056.web.app/
 
-#For browsing through the website, you need to register as some of the pages are private and requires login
+# For browsing through the website, you need to register as some of the pages are private and requires login
 
 # Zeus Equipment Website
 
