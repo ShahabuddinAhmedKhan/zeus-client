@@ -14,6 +14,7 @@ import Private from "../components/Private";
 import AllEquipment from "../components/Equipment Related Page/AllEquipment";
 import Details from "../components/Equipment Related Page/Details";
 import Products from "../components/Products";
+import SportsCategory from "../components/SportsCategory";
 
 const router = createBrowserRouter([
     {
@@ -25,11 +26,13 @@ const router = createBrowserRouter([
                 element: <>
                     <Banner></Banner>
                     <Products></Products>
+                    <SportsCategory></SportsCategory>
                 </>,
-                loader: () => {
-                    const forProducts = fetch("http://localhost:5031/sixProducts");
+                loader: async() => {
+                    const forProducts =  await fetch("http://localhost:5031/sixProducts");
+                    const products = await forProducts.json()
 
-                    return forProducts
+                    return products
                 }
             },
 
@@ -55,6 +58,11 @@ const router = createBrowserRouter([
                 path: "details/:id",
                 element: <Private><Details></Details></Private>,
                 loader: ({ params }) => fetch(`http://localhost:5031/equipments/${params.id}`)
+            },
+            {
+                path: `category/:name`,
+                element: <Products></Products>,
+                loader: ({params}) => fetch(`http://localhost:5031/category/${params.name}`)
             }
 
         ]

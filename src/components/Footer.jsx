@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className="font-bold">
                         Zeus Industries Ltd.
                         <br />
-                        Providing reliable tech since 1992
+                        Providing reliable tech since 1999
                     </p>
                     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                 </aside>

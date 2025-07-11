@@ -21,7 +21,7 @@ const Banner = () => {
                 md:h-[70vh] lg:h-[83vh]">
                     <img
                         src={banner3}
-                        className="w-full" />
+                        className="w-full object-cover" />
                 </div>
             </div>
             <div className="flex w-full justify-center gap-2 py-2">
